@@ -1,5 +1,8 @@
 FROM node
 
+## RaspberryPi
+# FROM  hypriot/rpi-node
+
 #ENV http_proxy 
 #ENV https_proxy 
 #ENV no_proxy 
@@ -21,5 +24,5 @@ RUN npm -y install socket.io
 
 CMD node ./manager/manager.js
 
-#EXPOSE 3000 40000 50000
 EXPOSE 3000
+
