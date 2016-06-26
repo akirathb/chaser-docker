@@ -1,0 +1,14 @@
+
+manager:
+  image: chaser/u16
+  ports:
+    - "3000:3000"
+
+server:
+  image: server/u16
+  ports:
+    - "40000:40000"
+    - "50000:50000"
+  links:
+    - manager
+    

@@ -1,0 +1,13 @@
+FROM chaser/u16 
+
+WORKDIR /chaserver-master
+CMD node ./manager/manager.py
+
+EXPOSE 3000
+
+
+
+
+
+
+
