@@ -25,9 +25,11 @@
 + このリポジトリをクローンする
 
     git clone https://github.com/akirathb/chaser-docker.git 
+
     cd chaser-docker
 
 + builtする
+
     docker-compose built
 
 これだけです
@@ -43,23 +45,26 @@
     このユーザで  docker , docker-compose が使える
 
 + このリポジトリをクローンする
+
     git clone https://github.com/akirathb/chaser-docker.git
+
     cd chaser-docker
 
-    取得するDocker イメージを ラズバイ用に Dockerファイルの修正
++ 取得するDocker イメージを ラズバイ用に Dockerファイルの修正
 
     manager/Dockerfile
+
     server/Dockerfile
 
-    共に
+共に
 
     FROM node  を
     FROM hypriot/rpi-node に修正
 
 
 + builtする
-    docker-compose built
 
+    docker-compose built
 
     Step 1 : FROM hypriot/rpi-node
     Get https://registry-1.docker.io/v2/hypriot/rpi-node/manifests/latest: Get https://auth.docker.io/token?scope=repository%3Ahypriot%2Frpi-node%3Apull&service=registry.docker.io: dial tcp: lookup auth.docker.io: no such host
@@ -68,7 +73,6 @@
 
     host auth.docker.io  で、IPアドレスを検索　複数表示されるので、1つを選んで auth.docker.io を /etc/hosts に書く
 
-    あとは ubuntu と同じ
 
     
 ## Start Server 
@@ -82,5 +86,6 @@
 ## Stop Server
 
     docker-compose down 
+
 
 
