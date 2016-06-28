@@ -1,3 +1,4 @@
+
 # chaser-docker
 
 ## About
@@ -29,8 +30,7 @@
     2016/6/26 現在最新は Version 0.8.0 Barbossa https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip
    
     SDカードにイメージを書き込む (ラズビアンとかと同様）
-　　
-    ブートする Version 0.8.0 では ユーザ/パスワードは pirate/hypriot 
+    ブートする Version 0.8.0 では ユーザ/パスワードは pirate/hypriot
     
     このユーザで docker が使える
     取得するDocker イメージを ラズバイ用に Dockerファイルの修正
@@ -44,12 +44,11 @@
     FROM hypriot/rpi-node に修正
 
     Step 1 : FROM hypriot/rpi-node
-    Get https://registry-1.docker.io/v2/hypriot/rpi-node/manifests/latest: Get https://auth.docker.io/token?scope=repository%3Ahypriot%2Frpi-node%3Apull    &service=registry.docker.io: dial tcp: lookup auth.docker.io: no such host
+    Get https://registry-1.docker.io/v2/hypriot/rpi-node/manifests/latest: Get https://auth.docker.io/token?scope=repository%3Ahypriot%2Frpi-node%3Apull&service=registry.docker.io: dial tcp: lookup auth.docker.io: no such host
 
     と怒られた時 https://linuxconfig.org/docker-dial-tcp-lookup-index-docker-io-no-such-host-fix に Soluion が
 
-　　host auth.docker.io  で、IPアドレスを検索　複数表示されるので、1つを選んで
-    auth.docker.io を /etc/hosts に書く　
+    host auth.docker.io  で、IPアドレスを検索　複数表示されるので、1つを選んで auth.docker.io を /etc/hosts に書く
 
     あとは ubuntu と同じ
 
