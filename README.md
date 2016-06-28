@@ -2,16 +2,21 @@
 
 ## About
 
-   https://github.com/lrks/chaserver を 簡単にインストールする
+   U16 Kushiro プログラミングコンテストの 競技部門の CHaser サーバの実装の一つ 
+　 lrks さんの https://github.com/lrks/chaserver を 超簡単にインストールする。
 
 ## 動いた環境
 
-+   ubuntu16.04LTS　node 
++   ubuntu16.04LTS 
 
 +   RaspberryPi2  http://blog.hypriot.com/ Version 0.8.0 Barbossa
 
 
 ## Install
+
+## 準備
+
++ docker 及び docker-compose をインストールする
 
 ### Ubuntu
 
@@ -19,10 +24,7 @@
     cd chaser-docker
     docker-compose built
 
-### 
-
-RaspberryPi2  http://blog.hypriot.com/ Version 0.8.0 Barbossa
-----
+### Raspberry Pi2
 
     Docker がインストールされている ラズバイのイメージをダウンロードする http://blog.hypriot.com/downloads/
     2016/6/26 現在最新は Version 0.8.0 Barbossa https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip
