@@ -23,7 +23,8 @@
 + docker 及び docker-compose をインストールする（ググってください）
 
 + このリポジトリをクローンする
-    git clone https://github.com/akirathb/chaser-docker.git
+
+    git clone https://github.com/akirathb/chaser-docker.git 
     cd chaser-docker
 
 + builtする
