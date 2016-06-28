@@ -1,11 +1,13 @@
 
 manager:
-  image: chaser/u16
+  build: ./manager
+#  image: manager
   ports:
     - "3000:3000"
 
 server:
-  image: server/u16
+  build: ./server
+#  image: server
   ports:
     - "40000:40000"
     - "50000:50000"
