@@ -16,23 +16,35 @@
 
 ## 準備
 
-+ docker 及び docker-compose をインストールする
+
 
 ### Ubuntu
 
++ docker 及び docker-compose をインストールする（ググってください）
+
++ このリポジトリをクローンする
     git clone https://github.com/akirathb/chaser-docker.git
     cd chaser-docker
+
++ builtする
     docker-compose built
+
+これだけです
 
 ### Raspberry Pi2
 
-    Docker がインストールされている ラズバイのイメージをダウンロードする http://blog.hypriot.com/downloads/
+    Docker がインストールされている OSのイメージをダウンロードしてSDカードに書き込む
+　　http://blog.hypriot.com/downloads/
     2016/6/26 現在最新は Version 0.8.0 Barbossa https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip
    
-    SDカードにイメージを書き込む (ラズビアンとかと同様）
     ブートする Version 0.8.0 では ユーザ/パスワードは pirate/hypriot
     
-    このユーザで docker が使える
+    このユーザで  docker , docker-compose が使える
+
++ このリポジトリをクローンする
+    git clone https://github.com/akirathb/chaser-docker.git
+    cd chaser-docker
+
     取得するDocker イメージを ラズバイ用に Dockerファイルの修正
 
     manager/Dockerfile
@@ -42,6 +54,11 @@
 
     FROM node  を
     FROM hypriot/rpi-node に修正
+
+
++ builtする
+    docker-compose built
+
 
     Step 1 : FROM hypriot/rpi-node
     Get https://registry-1.docker.io/v2/hypriot/rpi-node/manifests/latest: Get https://auth.docker.io/token?scope=repository%3Ahypriot%2Frpi-node%3Apull&service=registry.docker.io: dial tcp: lookup auth.docker.io: no such host
