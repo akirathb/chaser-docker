@@ -15,19 +15,14 @@
 
 ### Ubuntu
 
-    clone this repo
-
-    cd chaser
-    docker build -t chaser/u16 .
-    cd ..
-    cd cserve
-    docker build -t server/u16 .
-    cd ..
-
-    docker images
+    git clone https://github.com/akirathb/chaser-docker.git
+    cd chaser-docker
+    docker-compose built
 
 ### 
+
 RaspberryPi2  http://blog.hypriot.com/ Version 0.8.0 Barbossa
+----
 
     Docker がインストールされている ラズバイのイメージをダウンロードする http://blog.hypriot.com/downloads/
     2016/6/26 現在最新は Version 0.8.0 Barbossa https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip
@@ -40,7 +35,7 @@ RaspberryPi2  http://blog.hypriot.com/ Version 0.8.0 Barbossa
     
     取得するDocker イメージを ラズバイようにするために Dockerファイルの修正
 
-    chaser/Dockerfile
+    manager/Dockerfile
     server/Dockerfile
 
     共に
@@ -48,7 +43,6 @@ RaspberryPi2  http://blog.hypriot.com/ Version 0.8.0 Barbossa
     FROM node  を
     FROM hypriot/rpi-node に修正
 
-    docker build -t chaser/u16 . すると
 
     Step 1 : FROM hypriot/rpi-node
     Get https://registry-1.docker.io/v2/hypriot/rpi-node/manifests/latest: Get https://auth.docker.io/token?scope=repository%3Ahypriot%2Frpi-node%3Apull    &service=registry.docker.io: dial tcp: lookup auth.docker.io: no such host
@@ -60,13 +54,6 @@ RaspberryPi2  http://blog.hypriot.com/ Version 0.8.0 Barbossa
 
      あとは ubuntu と同じ
 
-
-
-    
-
-　　　
-
-    
     
 ## Start 
 
