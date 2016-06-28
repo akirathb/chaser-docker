@@ -85,7 +85,5 @@
 
 ## Stop Server
 
-    docker-compose down 
-
-
+    docker-compose stop
 
