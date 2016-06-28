@@ -2,8 +2,7 @@
 
 ## About
 
-   U16 Kushiro プログラミングコンテストの 競技部門の CHaser サーバの実装の一つ 
-　 lrks さんの https://github.com/lrks/chaserver を 超簡単にインストールする。
+   U16 Kushiro プログラミングコンテストの 競技部門の CHaser サーバの実装の一つ、lrks さんの https://github.com/lrks/chaserver を 超簡単にインストールする。
 
 ## 動いた環境
 
@@ -31,11 +30,10 @@
    
     SDカードにイメージを書き込む (ラズビアンとかと同様）
 　　
-　　ブートする 
-　　Version 0.8.0 では ユーザ/パスワードは pirate/hypriot
-    このユーザで docker が使える
+    ブートする Version 0.8.0 では ユーザ/パスワードは pirate/hypriot 
     
-    取得するDocker イメージを ラズバイようにするために Dockerファイルの修正
+    このユーザで docker が使える
+    取得するDocker イメージを ラズバイ用に Dockerファイルの修正
 
     manager/Dockerfile
     server/Dockerfile
@@ -45,7 +43,6 @@
     FROM node  を
     FROM hypriot/rpi-node に修正
 
-
     Step 1 : FROM hypriot/rpi-node
     Get https://registry-1.docker.io/v2/hypriot/rpi-node/manifests/latest: Get https://auth.docker.io/token?scope=repository%3Ahypriot%2Frpi-node%3Apull    &service=registry.docker.io: dial tcp: lookup auth.docker.io: no such host
 
@@ -54,21 +51,19 @@
 　　host auth.docker.io  で、IPアドレスを検索　複数表示されるので、1つを選んで
     auth.docker.io を /etc/hosts に書く　
 
-     あとは ubuntu と同じ
+    あとは ubuntu と同じ
 
     
-## Start 
+## Start Server 
 
     docker-compose up -d
 
+## Use Server
 
-## Use
+    http://yourserver:3000/　にブラウザからアクセス
 
-    http://yourserver:3000/
-
-## Stop
+## Stop Server
 
     docker-compose down 
-
 
 
