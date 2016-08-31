@@ -62,9 +62,9 @@
     FROM hypriot/rpi-node に修正
 
 
-+ builtする
++ buildする
 
-    docker-compose built
+    docker-compose build
 
     Step 1 : FROM hypriot/rpi-node
     Get https://registry-1.docker.io/v2/hypriot/rpi-node/manifests/latest: Get https://auth.docker.io/token?scope=repository%3Ahypriot%2Frpi-node%3Apull&service=registry.docker.io: dial tcp: lookup auth.docker.io: no such host  
