@@ -9,6 +9,8 @@
 
 +   ubuntu16.04LTS 
 
++   RaspberryPi2  http://blog.hypriot.com/ Version 1.0.0 Blackbeard
+
 +   RaspberryPi2  http://blog.hypriot.com/ Version 0.8.0 Barbossa
 
 
@@ -38,9 +40,10 @@
 
     Docker がインストールされている OSのイメージをダウンロードしてSDカードに書き込む
 　　http://blog.hypriot.com/downloads/
-    2016/6/26 現在最新は Version 0.8.0 Barbossa https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip
+
+    2016/8/31 現在最新は Version 1.0.0 Blackbeard https://downloads.hypriot.com/hypriotos-rpi-v1.0.0.img.zip
    
-    ブートする Version 0.8.0 では ユーザ/パスワードは pirate/hypriot
+    ブートする Version 1.0.0 では ユーザ/パスワードは pirate/hypriot
     
     このユーザで  docker , docker-compose が使える
 
@@ -66,13 +69,15 @@
 
     docker-compose build
 
+
+    Version 1.0.0 では以下のエラーは出なかった
+
     Step 1 : FROM hypriot/rpi-node
     Get https://registry-1.docker.io/v2/hypriot/rpi-node/manifests/latest: Get https://auth.docker.io/token?scope=repository%3Ahypriot%2Frpi-node%3Apull&service=registry.docker.io: dial tcp: lookup auth.docker.io: no such host  
 
     と怒られた時 https://linuxconfig.org/docker-dial-tcp-lookup-index-docker-io-no-such-host-fix に Soluion が上がっている
 
     host auth.docker.io  で、IPアドレスを検索　複数表示されるので、1つを選んで auth.docker.io を /etc/hosts に書く
-
 
     
 ## Start Server 
@@ -86,4 +91,5 @@
 ## Stop Server
 
     docker-compose stop
+
 
