@@ -28,9 +28,9 @@
 
     cd chaser-docker
 
-+ buildする
++ builtする
 
-    docker-compose build
+    docker-compose built
 
 これだけです
 
@@ -87,3 +87,6 @@
 
     docker-compose stop
 
+## Todo
+
+    client も作る？
