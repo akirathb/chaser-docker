@@ -1,7 +1,7 @@
 FROM node:6.10.0
 
 ## RaspberryPi
-# FROM  hypriot/rpi-node
+# FROM  hypriot/rpi-node:6.11.0
 
 #ENV http_proxy 
 #ENV https_proxy 
