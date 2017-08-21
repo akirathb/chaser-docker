@@ -36,6 +36,31 @@
 
 これだけです
 
+### Raspberry Pi3
+
++ 最新のRaspbian 2017-05以降(?)で Docker をインストール
+
+   Raspberry Pi用docker-composeの構築 http://qiita.com/tkyonezu/items/ceaaf41924df39254058 の手順
+
+    curl -sSL https://get.docker.com/ | sh
+    
+    sudo gpasswd -a pi docker
+    
++ docker-compose をビルド
+
+    git clone https://github.com/docker/compose.git
+    cd compose/
+    docker build -t docker-compose:armhf -f Dockerfile.armhf .
+    docker run --rm --entrypoint="script/build/linux-entrypoint" -v $(pwd)/dist:/code/dist -v $(pwd)/.git:/code/.git "docker-compose:armhf"
+ 
+ + distにできるので コピーしてパーミッションを変更
+ 
+    ls -l dist/
+    cp dist/docker-compose-Linux-armv7l /usr/local/bin/docker-compose
+    root:root /usr/local/bin/docker-compose
+    chmod 0755 /usr/local/bin/docker-compose
+    docker-compose version
+
 ### Raspberry Pi2
 
     Docker がインストールされている OSのイメージをダウンロードしてSDカードに書き込む
