@@ -42,12 +42,12 @@
 
    Raspberry Pi用 docker-composeの構築 http://qiita.com/tkyonezu/items/ceaaf41924df39254058 の手順
    
-    curl -sSL https://get.docker.com/ | sh
+    curl -sSL https://get.docker.com/ | sh 
+    
+    docker info 
     
-    docker info
-    
-    sudo gpasswd -a pi docker
-    
+    sudo gpasswd -a pi docker 
+     
 + docker-compose をビルド
 
      git clone https://github.com/docker/compose.git
@@ -64,7 +64,7 @@
      
      cp dist/docker-compose-Linux-armv7l /usr/local/bin/docker-compose
      
-     root:root /usr/local/bin/docker-compose
+     chown root:root /usr/local/bin/docker-compose
      
      chmod 0755 /usr/local/bin/docker-compose
      
